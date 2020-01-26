@@ -7,8 +7,8 @@ html, body {
 }
 
 .container {
-    width: 800px;
-    margin: 0 auto 0 auto;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: left;
 }
 
@@ -23,12 +23,12 @@ input[type="text"] {
 
 table {
     margin-top: 50px;
+    width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
 }
 
 caption {
-    /* font-weight: bold; */
     font-size: 15pt;
 }
 
@@ -43,10 +43,6 @@ th, td {
     width: 3em;
 }
 
-/* td {
-    text-align: right;
-} */
-
 th.header {
     width: 150px;
 }
@@ -58,9 +54,3 @@ td.data {
 .navi {
     text-align: center;
 }
-
-/* ul li {
-    list-style: none;
-    float: left;
-    margin: 10px 20px;
-} */

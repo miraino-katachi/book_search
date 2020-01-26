@@ -1,194 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="jp">
+
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>書籍検索</title>
-<link rel="stylesheet" href="./css/normalize.css">
-<link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>書籍検索</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-<div class="container">
-<h1>書籍検索</h1>
+    <div class="container">
+        <h1>書籍検索</h1>
 
-<form action="./" method="post">
-    ISBN：<input type="text" name="isbn">
-    <input type="submit" value="検索">
-    <input type="reset" value="リセット">
-</form>
-<table>
-    <caption>検索結果</caption>
-    <tr>
-        <th class="header">ISBN</th>
-        <td class="data">4774190446</td>
+        <form action="./" method="post">
+            ISBN：<input type="text" name="isbn">
+            <input type="submit" value="検索">
+            <input type="reset" value="リセット">
+        </form>
+        <table>
+            <caption>検索結果</caption>
+            <tr>
+                <th class="header">ISBN</th>
+                <td class="data">4798060992</td>
                 <td class="image" rowspan="6">
-            <img src="http://books.google.com/books/content?id=sM6HtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="3ステップでしっかり学ぶ PHP入門">
-        </td>
+                    <img src="http://books.google.com/books/content?id=HsIzzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                        alt="PHPフレームワークLaravel入門">
+                </td>
             </tr>
-    <tr>
-        <th class="header">タイトル</th>
-        <td class="data">3ステップでしっかり学ぶ PHP入門</td>
-    </tr>
-    <tr>
-        <th class="header">サブタイトル</th>
-        <td class="data"></td>
-    </tr>
-    <tr>
-        <th class="header">著者</th>
-        <td class="data">小田垣佑</td>
-    </tr>
-    <tr>
-        <th class="header">出版日</th>
-        <td class="data">2017-08-03</td>
-    </tr>
-    <tr>
-        <th class="header">説明</th>
-        <td class="data">一番わかりやすいPHPの入門書。到達度がわかる練習問題付き。</td>
-</table>
-
-<pre>
-<!-- array(3) {
-  ["kind"]=>
-  string(13) "books#volumes"
-  ["totalItems"]=>
-  int(1)
-  ["items"]=>
-  array(1) {
-    [0]=>
-    array(8) {
-      ["kind"]=>
-      string(12) "books#volume"
-      ["id"]=>
-      string(12) "sM6HtAEACAAJ"
-      ["etag"]=>
-      string(11) "vxh7MdW7Ri4"
-      ["selfLink"]=>
-      string(56) "https://www.googleapis.com/books/v1/volumes/sM6HtAEACAAJ"
-      ["volumeInfo"]=>
-      array(18) {
-        ["title"]=>
-        string(44) "3ステップでしっかり学ぶ PHP入門"
-        ["subtitle"]=>
-        string(0) ""
-        ["authors"]=>
-        array(3) {
-          [0]=>
-          string(12) "小田垣佑"
-          [1]=>
-          string(9) "大井渉"
-          [2]=>
-          string(12) "金替洋佑"
-        }
-        ["publishedDate"]=>
-        string(10) "2017-08-03"
-        ["description"]=>
-        string(84) "一番わかりやすいPHPの入門書。到達度がわかる練習問題付き。"
-        ["industryIdentifiers"]=>
-        array(2) {
-          [0]=>
-          array(2) {
-            ["type"]=>
-            string(7) "ISBN_10"
-            ["identifier"]=>
-            string(10) "4774190446"
-          }
-          [1]=>
-          array(2) {
-            ["type"]=>
-            string(7) "ISBN_13"
-            ["identifier"]=>
-            string(13) "9784774190440"
-          }
-        }
-        ["readingModes"]=>
-        array(2) {
-          ["text"]=>
-          bool(false)
-          ["image"]=>
-          bool(false)
-        }
-        ["pageCount"]=>
-        int(303)
-        ["printType"]=>
-        string(4) "BOOK"
-        ["maturityRating"]=>
-        string(10) "NOT_MATURE"
-        ["allowAnonLogging"]=>
-        bool(false)
-        ["contentVersion"]=>
-        string(13) "preview-1.0.0"
-        ["panelizationSummary"]=>
-        array(2) {
-          ["containsEpubBubbles"]=>
-          bool(false)
-          ["containsImageBubbles"]=>
-          bool(false)
-        }
-        ["imageLinks"]=>
-        array(2) {
-          ["smallThumbnail"]=>
-          string(101) "http://books.google.com/books/content?id=sM6HtAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
-          ["thumbnail"]=>
-          string(101) "http://books.google.com/books/content?id=sM6HtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-        }
-        ["language"]=>
-        string(2) "ja"
-        ["previewLink"]=>
-        string(93) "http://books.google.co.jp/books?id=sM6HtAEACAAJ&dq=isbn:9784774190440&hl=&cd=1&source=gbs_api"
-        ["infoLink"]=>
-        string(88) "http://books.google.co.jp/books?id=sM6HtAEACAAJ&dq=isbn:9784774190440&hl=&source=gbs_api"
-        ["canonicalVolumeLink"]=>
-        string(166) "https://books.google.com/books/about/3%E3%82%B9%E3%83%86%E3%83%83%E3%83%97%E3%81%A7%E3%81%97%E3%81%A3%E3%81%8B%E3%82%8A%E5%AD%A6%E3%81%B6_PHP.html?hl=&id=sM6HtAEACAAJ"
-      }
-      ["saleInfo"]=>
-      array(3) {
-        ["country"]=>
-        string(2) "JP"
-        ["saleability"]=>
-        string(12) "NOT_FOR_SALE"
-        ["isEbook"]=>
-        bool(false)
-      }
-      ["accessInfo"]=>
-      array(10) {
-        ["country"]=>
-        string(2) "JP"
-        ["viewability"]=>
-        string(8) "NO_PAGES"
-        ["embeddable"]=>
-        bool(false)
-        ["publicDomain"]=>
-        bool(false)
-        ["textToSpeechPermission"]=>
-        string(7) "ALLOWED"
-        ["epub"]=>
-        array(1) {
-          ["isAvailable"]=>
-          bool(false)
-        }
-        ["pdf"]=>
-        array(1) {
-          ["isAvailable"]=>
-          bool(false)
-        }
-        ["webReaderLink"]=>
-        string(90) "http://play.google.com/books/reader?id=sM6HtAEACAAJ&hl=&printsec=frontcover&source=gbs_api"
-        ["accessViewStatus"]=>
-        string(4) "NONE"
-        ["quoteSharingAllowed"]=>
-        bool(false)
-      }
-      ["searchInfo"]=>
-      array(1) {
-        ["textSnippet"]=>
-        string(84) "一番わかりやすいPHPの入門書。到達度がわかる練習問題付き。"
-      }
-    }
-  }
-}
- -->
-</pre>
-
-
-</div>
+            <tr>
+                <th class="header">タイトル</th>
+                <td class="data">PHPフレームワークLaravel入門</td>
+            </tr>
+            <tr>
+                <th class="header">サブタイトル</th>
+                <td class="data"></td>
+            </tr>
+            <tr>
+                <th class="header">著者</th>
+                <td class="data">掌田津耶乃</td>
+            </tr>
+            <tr>
+                <th class="header">出版日</th>
+                <td class="data">2020</td>
+            </tr>
+            <tr>
+                <th class="header">説明</th>
+                <td class="data">人気No.1フレームワークのロングセラー定番解説書が、新バージョン対応で改訂!Laravel6、PHP7.2対応。</td>
+            </tr>
+        </table>
+    </div>
 </body>
+
 </html>
