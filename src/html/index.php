@@ -8,6 +8,8 @@ foreach ($_POST as $k => $v) {
 // ISBNを取得
 $isbn = '';
 if (isset($post['isbn'])) {
+    // 正規表現を用いて、数字以外の文字を空文字に変換する
+    // https://www.php.net/manual/ja/function.preg-replace.php
     $isbn = preg_replace('/[^0-9]/', '', $post['isbn']);
 }
 
@@ -19,11 +21,13 @@ if ($isbn) {
     // Google Books APIのURL
     $url = "https://www.googleapis.com/books/v1/volumes?q=isbn:$isbn";
 
-    // 習得したJSONデータ
+    // JSONデータをGoogle Books APIから取得する
+    // https://www.php.net/manual/ja/function.file-get-contents.php
     $json = file_get_contents($url);
 
-    // JSONデータをデコードして連想配列に変換する
+    // 取得したJSONデータをデコードして連想配列に変換する
     // （第2引数をtrueにすることによって、連想配列で返却される）
+    // https://www.php.net/manual/ja/function.json-decode.php
     $src = json_decode($json, true);
 
     if (is_null($src)) {
@@ -105,8 +109,11 @@ if ($isbn) {
                 </table>
 
                 <pre>
-<!-- <?php var_dump($src) ?> -->
-</pre>
+<!-- 下記、デバッグ用です -->
+<!--
+<?php var_dump($src) ?>
+-->
+                </pre>
 
         <?php
         }
